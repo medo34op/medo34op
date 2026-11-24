@@ -1,6 +1,6 @@
 <div align="center">
 
-# `MEDO34`
+# `MEDO34OP`
 
 ### AI DEVELOPER • CYBERSECURITY • LINUX
 
@@ -12,10 +12,10 @@
 
 <div align="center">
 
-## 🌌 MEDO34 UNIVERSE
+## 🌌 MEDO34OP UNIVERSE
 
 <a href="https://medo34op.github.io/medo34op/">
-  <img src="https://raw.githubusercontent.com/medo34op/medo34op/main/site/universe-preview.svg" alt="Explore the medo34 Universe" width="100%" />
+  <img src="https://raw.githubusercontent.com/medo34op/medo34op/main/site/universe-preview.svg" alt="Explore the medo34op Universe" width="100%" />
 </a>
 
 **[ ENTER THE UNIVERSE ↗](https://medo34op.github.io/medo34op/)**
@@ -31,7 +31,7 @@
 ```python
 class Developer:
     def __init__(self):
-        self.name = "Medo34"
+        self.name = "Medo34op"
         self.focus = ["Artificial Intelligence", "Cybersecurity"]
         self.environment = ["Arch Linux", "Apsis Rice"]
         self.goal = "Build things that once seemed impossible"
