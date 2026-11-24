@@ -43,7 +43,7 @@ class Developer:
         }
 ```
 
-**Environment:** Arch Linux · [Apsis Rice ↗](https://github.com/Aws-702/Apsis)
+**Environment:** Arch Linux · Apsis Rice
 
 ## `$ tech --stack`
 
