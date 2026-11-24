@@ -41,7 +41,7 @@ footer{text-align:center;color:#71899c;font-size:12px;padding:0 20px 24px}
 <div class="orbit"><button class="planet" aria-label="Tech stack" data-id="stack"></button></div>
 <div class="orbit"><button class="planet" aria-label="Environment" data-id="environment"></button></div>
 </div></div></section>
-<aside class="panel" aria-live="polite"><div class="kicker" id="kicker">Start exploring</div><h2 id="title">Welcome to my Universe</h2><p id="description">Select one of the orbiting planets to explore a different part of my developer world.</p><div class="chips" id="chips"><span>AI</span><span>Cybersecurity</span><span>Linux</span></div><a class="environment-link" id="environment-link" href="https://github.com/Aws-702/Apsis" target="_blank" rel="noopener noreferrer" hidden>Apsis Rice ↗</a><div class="hint">SELECT A PLANET TO NAVIGATE</div></aside>
+<aside class="panel" aria-live="polite"><div class="kicker" id="kicker">Start exploring</div><h2 id="title">Welcome to my Universe</h2><p id="description">Select one of the orbiting planets to explore a different part of my developer world.</p><div class="chips" id="chips"><span>AI</span><span>Cybersecurity</span><span>Linux</span></div><span class="environment-link" id="environment-link" hidden>Apsis Rice</span><div class="hint">SELECT A PLANET TO NAVIGATE</div></aside>
 </div></main>
 <footer>Built with curiosity · Powered by Arch Linux · <a href="https://github.com/medo34op" style="color:#72e4f7">github.com/medo34op</a></footer>
 <script>
@@ -49,8 +49,8 @@ const content={
 about:{k:'01 / Identity',t:'About Me',d:'I am a student exploring the intersection of artificial intelligence, cybersecurity, and software engineering.',c:['AI','Cybersecurity','Python']},
 projects:{k:'02 / Building',t:'Projects',d:'Blurey is my exploration of intelligent systems. Bluru is a concept for AI-assisted bug discovery.',c:['Blurey','Bluru','Experimentation']},
 stack:{k:'03 / Tools',t:'Tech Stack',d:'The tools I use while learning, building, and experimenting across software and security.',c:['Python','Git','GitHub','VS Code']},
-environment:{k:'04 / Workspace',t:'Environment',d:'Arch Linux is my daily environment, running Hyprland with my Apsis Rice setup.',c:['Arch Linux','Hyprland','Apsis Rice'],link:'https://github.com/Aws-702/Apsis'}
+environment:{k:'04 / Workspace',t:'Environment',d:'Arch Linux is my daily environment, running Hyprland with my Apsis Rice setup.',c:['Arch Linux','Hyprland','Apsis Rice']}
 };
-document.querySelectorAll('.planet').forEach(b=>b.addEventListener('click',()=>{const x=content[b.dataset.id];document.getElementById('kicker').textContent=x.k;document.getElementById('title').textContent=x.t;document.getElementById('description').textContent=x.d;document.getElementById('chips').innerHTML=x.c.map(v=>'<span>'+v+'</span>').join('');const link=document.getElementById('environment-link');link.hidden=!x.link;if(x.link)link.href=x.link;}));
+document.querySelectorAll('.planet').forEach(b=>b.addEventListener('click',()=>{const x=content[b.dataset.id];document.getElementById('kicker').textContent=x.k;document.getElementById('title').textContent=x.t;document.getElementById('description').textContent=x.d;document.getElementById('chips').innerHTML=x.c.map(v=>'<span>'+v+'</span>').join('');const link=document.getElementById('environment-link');link.hidden=b.dataset.id!=='environment';}));
 </script>
 </body></html>
