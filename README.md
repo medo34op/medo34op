@@ -33,7 +33,7 @@ class Developer:
     def __init__(self):
         self.name = "Medo34"
         self.focus = ["Artificial Intelligence", "Cybersecurity"]
-        self.environment = "Arch Linux"
+        self.environment = ["Arch Linux", "Apsis Rice"]
         self.goal = "Build things that once seemed impossible"
 
     def currently(self):
@@ -42,6 +42,8 @@ class Developer:
             "learning": ["AI", "Cybersecurity", "Python"]
         }
 ```
+
+**Environment:** Arch Linux · [Apsis Rice ↗](https://github.com/Aws-702/Apsis)
 
 ## `$ tech --stack`
 
