@@ -53,8 +53,15 @@ class Developer:
 
 ## `$ projects`
 
-- **Blurey** — Exploring intelligent systems and AI.
-- **Bluru** — An AI-powered bug discovery concept.
+<div align="center">
+
+### Something is taking shape.
+
+*No public projects yet — I'm building, experimenting, and learning. This space will have something worth exploring soon.*
+
+`STATUS: IN DEVELOPMENT`
+
+</div>
 
 ## `$ github --stats`
 
