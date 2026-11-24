@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050912">
+<title>medo34 Universe</title>
+<style>
+:root{color-scheme:dark;--bg:#050912;--cyan:#72e4f7;--muted:#9bb2c5;--panel:rgba(10,22,38,.82)}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 45%,#102b43 0,#081321 38%,#050912 76%);color:#e8f7ff;font:15px/1.6 Inter,ui-sans-serif,system-ui,sans-serif;overflow-x:hidden}
+header{position:fixed;z-index:5;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:22px 5vw;color:#c9dce9;letter-spacing:.12em;font-size:12px}
+header a{color:var(--cyan);text-decoration:none}.brand{font-weight:800;letter-spacing:.2em}
+main{min-height:100vh;display:grid;place-items:center;padding:90px 20px 40px}.layout{width:min(1120px,100%);display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:center}
+h1{font-size:clamp(34px,5vw,62px);line-height:1.04;margin:0 0 14px;letter-spacing:-.05em}h1 span{color:var(--cyan)}.intro{color:var(--muted);max-width:520px;margin:0 0 26px}
+.scene{height:min(68vw,610px);min-height:420px;position:relative;display:grid;place-items:center;perspective:1000px;isolation:isolate}
+.starfield{position:absolute;inset:0;background-image:radial-gradient(1px 1px at 10% 20%,#d5f8ff 99%,transparent),radial-gradient(1px 1px at 70% 14%,#fff 99%,transparent),radial-gradient(1px 1px at 85% 65%,#9adfff 99%,transparent),radial-gradient(1px 1px at 24% 78%,#fff 99%,transparent),radial-gradient(1px 1px at 50% 40%,#d5f8ff 99%,transparent);background-size:190px 170px;opacity:.65}
+.system{position:relative;width:390px;height:390px;max-width:90vw;max-height:90vw;transform-style:preserve-3d;transform:rotateX(62deg) rotateZ(-12deg)}
+.sun{position:absolute;width:84px;height:84px;left:50%;top:50%;transform:translate(-50%,-50%) rotateX(-62deg);border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#b6f5ff,#2685a8 42%,#102b49 75%);box-shadow:0 0 34px #3ac9ed88,0 0 90px #278ab655;color:#eaffff;font-weight:800;letter-spacing:.1em}
+.orbit{position:absolute;left:50%;top:50%;border:1px solid #77dff52b;border-radius:50%;transform:translate(-50%,-50%);animation:spin linear infinite}
+.orbit:nth-of-type(2){width:145px;height:145px;animation-duration:24s}.orbit:nth-of-type(3){width:225px;height:225px;animation-duration:34s;animation-direction:reverse}.orbit:nth-of-type(4){width:305px;height:305px;animation-duration:46s}.orbit:nth-of-type(5){width:385px;height:385px;animation-duration:58s;animation-direction:reverse}
+.planet{position:absolute;top:50%;left:100%;width:18px;height:18px;margin:-9px;border:0;border-radius:50%;cursor:pointer;background:var(--planet);box-shadow:0 0 12px var(--planet),0 0 28px color-mix(in srgb,var(--planet),transparent 55%);transform:rotateX(-62deg);transition:scale .2s}
+.planet:hover,.planet:focus-visible{scale:1.5;outline:2px solid #eafaff;outline-offset:5px}
+.orbit:nth-of-type(2) .planet{--planet:#72e4f7}.orbit:nth-of-type(3) .planet{--planet:#a68df2}.orbit:nth-of-type(4) .planet{--planet:#64d7c2}.orbit:nth-of-type(5) .planet{--planet:#f1b984}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.panel{background:var(--panel);border:1px solid #8bdff52a;border-radius:22px;padding:28px;backdrop-filter:blur(16px);box-shadow:0 18px 70px #0006;min-height:250px}
+.kicker{color:var(--cyan);font-size:11px;letter-spacing:.2em;text-transform:uppercase}.panel h2{margin:10px 0;font-size:27px}.panel p{color:var(--muted);margin:0 0 20px}.panel a{color:var(--cyan);text-decoration:none}.hint{font-size:12px;color:#7792a8;margin-top:20px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chips span{border:1px solid #7bdff533;border-radius:999px;padding:5px 10px;color:#c4e4f2;font-size:12px}
+footer{text-align:center;color:#71899c;font-size:12px;padding:0 20px 24px}
+@media(max-width:780px){.layout{grid-template-columns:1fr;gap:8px}.scene{height:420px;min-height:360px}.system{width:320px;height:320px}.orbit:nth-of-type(5){width:320px;height:320px}.orbit:nth-of-type(4){width:255px;height:255px}.orbit:nth-of-type(3){width:190px;height:190px}.orbit:nth-of-type(2){width:125px;height:125px}.panel{max-width:600px;margin:auto}}
+@media(prefers-reduced-motion:reduce){.orbit{animation:none}}
+</style>
+</head>
+<body>
+<header><div class="brand">MEDO34 / UNIVERSE</div><a href="https://github.com/medo34op">GITHUB ↗</a></header>
+<main><div class="layout">
+<section><div class="kicker">A personal developer universe</div><h1>Explore beyond<br><span>the ordinary.</span></h1><p class="intro">A small interactive map of what I build, what I learn, and the environment where ideas turn into experiments.</p>
+<div class="scene" aria-label="Interactive orbital universe"><div class="starfield"></div><div class="system"><div class="sun">MEDO34</div>
+<div class="orbit"><button class="planet" aria-label="About me" data-id="about"></button></div>
+<div class="orbit"><button class="planet" aria-label="Projects" data-id="projects"></button></div>
+<div class="orbit"><button class="planet" aria-label="Tech stack" data-id="stack"></button></div>
+<div class="orbit"><button class="planet" aria-label="Environment" data-id="environment"></button></div>
+</div></div></section>
+<aside class="panel" aria-live="polite"><div class="kicker" id="kicker">Start exploring</div><h2 id="title">Welcome to my Universe</h2><p id="description">Select one of the orbiting planets to explore a different part of my developer world.</p><div class="chips" id="chips"><span>AI</span><span>Cybersecurity</span><span>Linux</span></div><div class="hint">SELECT A PLANET TO NAVIGATE</div></aside>
+</div></main>
+<footer>Built with curiosity · Powered by Arch Linux · <a href="https://github.com/medo34op" style="color:#72e4f7">github.com/medo34op</a></footer>
+<script>
+const content={
+about:{k:'01 / Identity',t:'About Me',d:'I am a student exploring the intersection of artificial intelligence, cybersecurity, and software engineering.',c:['AI','Cybersecurity','Python']},
+projects:{k:'02 / Building',t:'Projects',d:'Blurey is my exploration of intelligent systems. Bluru is a concept for AI-assisted bug discovery.',c:['Blurey','Bluru','Experimentation']},
+stack:{k:'03 / Tools',t:'Tech Stack',d:'The tools I use while learning, building, and experimenting across software and security.',c:['Python','Git','GitHub','VS Code']},
+environment:{k:'04 / Workspace',t:'Environment',d:'Arch Linux is my daily environment: configurable, minimal, and built around learning how the system works.',c:['Arch Linux','Hyprland','Linux']}
+};
+document.querySelectorAll('.planet').forEach(b=>b.addEventListener('click',()=>{const x=content[b.dataset.id];document.getElementById('kicker').textContent=x.k;document.getElementById('title').textContent=x.t;document.getElementById('description').textContent=x.d;document.getElementById('chips').innerHTML=x.c.map(v=>'<span>'+v+'</span>').join('');}));
+</script>
+</body></html>
