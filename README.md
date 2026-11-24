@@ -10,6 +10,22 @@
 
 ---
 
+<div align="center">
+
+## 🌌 MEDO34 UNIVERSE
+
+<a href="https://medo34op.github.io/medo34op/">
+  <img src="https://raw.githubusercontent.com/medo34op/medo34op/main/site/universe-preview.svg" alt="Explore the medo34 Universe" width="100%" />
+</a>
+
+**[ ENTER THE UNIVERSE ↗](https://medo34op.github.io/medo34op/)**
+
+*An interactive map of my projects, tools, and developer environment.*
+
+</div>
+
+---
+
 ## `$ whoami`
 
 ```python
